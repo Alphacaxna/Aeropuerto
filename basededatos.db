@@ -1,0 +1,61 @@
+CREATE TABLE matriculas (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    matricula VARCHAR(10) NOT NULL UNIQUE,
+    Tipo_de_avion VARCHAR(50) NOT NULL,
+    aerolinea VARCHAR(50) NOT NULL,
+    calificador VARCHAR(10),
+    Max_Pax INT NOT NULL
+);
+
+
+CREATE TABLE aeropuertos (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    RUTA VARCHAR(10) NOT NULL UNIQUE,
+    Tipo VARCHAR(50) NOT NULL,
+    Nombre VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE vuelos (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    consecutivo INT NOT NULL,
+    fecha DATE NOT NULL,
+    aeropuerto VARCHAR(10) DEFAULT 'MMTO' NOT NULL,
+    inicioFinOps VARCHAR(50) NOT NULL,
+    horaItinerario TIME NOT NULL,
+    hora TIME NOT NULL,
+    matricula VARCHAR(10) NOT NULL,
+    aeronave VARCHAR(50) NOT NULL,
+    origen VARCHAR(50) NOT NULL,
+    destino VARCHAR(50) NOT NULL,
+    aerolinea VARCHAR(50) NOT NULL,
+    tipoMov VARCHAR(50) NOT NULL,
+    pista VARCHAR(10) NOT NULL,
+    vuelo VARCHAR(50) NOT NULL,
+    maxPax INT NOT NULL,
+    factorOcup VARCHAR(10) NOT NULL,
+    calf VARCHAR(10) NOT NULL,
+    tipoLlegada VARCHAR(50) NOT NULL,
+    tipoSalida VARCHAR(50) NOT NULL,
+    posicion VARCHAR(50) NOT NULL,
+    adultosNac INT NOT NULL,
+    adultosInt INT NOT NULL,
+    infantesNac INT NOT NULL,
+    infantesInt INT NOT NULL,
+    transitoNac INT NOT NULL,
+    transitoInt INT NOT NULL,
+    conexionNac INT NOT NULL,
+    conexionInt INT NOT NULL,
+    exentosNac INT NOT NULL,
+    exentosInt INT NOT NULL,
+    totalNac INT NOT NULL,
+    totalInt INT NOT NULL,
+    totalPax INT NOT NULL,
+    pzasEquipaje INT NOT NULL,
+    kgsEquipaje INT NOT NULL,
+    kgsCarga INT NOT NULL,
+    correo VARCHAR(50) NOT NULL,
+    mostrador VARCHAR(50) NOT NULL,
+    banda VARCHAR(50) NOT NULL,
+    ptaAbordaje VARCHAR(50) NOT NULL,
+    observaciones TEXT
+);

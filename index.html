@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CCO - Aeropuerto Internacional de Toluca</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+    </style>
+</head>
+<body>
+    <header>
+        <div class="title">
+            <h1>Aeropuerto Internacional de Toluca</h1>
+            <h2>Centro de Control de Operaciones</h2>
+        </div>
+        <div class="logo">
+            <img src="img/logo.png" alt="Logo del Aeropuerto Internacional de Toluca">
+        </div>
+    </header>
+    <main>
+        <h2>Captura de Información de Vuelos</h2>
+        <form id="flightForm" action="php/insertar_vuelo.php" method="POST">
+            <div class="form-section">
+                <label for="consecutivo">Consecutivo:</label>
+                <input type="number" id="consecutivo" name="consecutivo" required>
+
+                <label for="fecha">Fecha:</label>
+                <input type="date" id="fecha" name="fecha" required>
+
+                <label for="aeropuerto">Aeropuerto:</label>
+                <input type="text" id="aeropuerto" name="aeropuerto" value="MMTO" readonly>
+
+                <label for="inicioFinOps">Inicio/Fin OPS:</label>
+                <input type="text" id="inicioFinOps" name="inicioFinOps" required>
+
+                <label for="horaItinerario">Hora Itinerario:</label>
+                <input type="time" id="horaItinerario" name="horaItinerario" required>
+
+                <label for="hora">Hora:</label>
+                <input type="time" id="hora" name="hora" required>
+
+                <label for="matricula">Matrícula:</label>
+                <input type="text" id="matricula" name="matricula" required>
+
+                <label for="aeronave">Aeronave:</label>
+                <input type="text" id="aeronave" name="aeronave" required>
+
+                <label for="origen">Origen:</label>
+                <input type="text" id="origen" name="origen" required>
+
+                <label for="destino">Destino:</label>
+                <input type="text" id="destino" name="destino" required>
+
+                <label for="aerolinea">Aerolínea:</label>
+                <input type="text" id="aerolinea" name="aerolinea" required>
+            </div>
+            <div class="form-section">
+                <label for="tipoMov">Tipo / Mov:</label>
+                <input type="text" id="tipoMov" name="tipoMov" required>
+
+                <label for="pista">Pista:</label>
+                <select id="pista" name="pista" required>
+                    <option value="15">15</option>
+                    <option value="33">33</option>
+                </select>
+
+                <label for="vuelo">Vuelo:</label>
+                <input type="text" id="vuelo" name="vuelo" required>
+
+                <label for="maxPax">Max Pax:</label>
+                <input type="number" id="maxPax" name="maxPax" required>
+
+                <label for="factorOcup">Factor Ocup.:</label>
+                <input type="text" id="factorOcup" name="factorOcup" readonly>
+
+                <label for="calf">Calf.:</label>
+                <input type="text" id="calf" name="calf" required>
+
+                <label for="tipoLlegada">Tipo Llegada:</label>
+                <input type="text" id="tipoLlegada" name="tipoLlegada" required>
+
+                <label for="tipoSalida">Tipo Salida:</label>
+                <input type="text" id="tipoSalida" name="tipoSalida" required>
+
+                <label for="posicion">Posición:</label>
+                <input type="text" id="posicion" name="posicion" required>
+
+                <label for="adultosNac">Adultos Nac:</label>
+                <input type="number" id="adultosNac" name="adultosNac" required>
+
+                <label for="adultosInt">Adultos Int:</label>
+                <input type="number" id="adultosInt" name="adultosInt" required>
+
+                <label for="infantesNac">Infantes Nac:</label>
+                <input type="number" id="infantesNac" name="infantesNac" required>
+
+                <label for="infantesInt">Infantes Int:</label>
+                <input type="number" id="infantesInt" name="infantesInt" required>
+
+                <label for="transitoNac">Tránsito Nac:</label>
+                <input type="number" id="transitoNac" name="transitoNac" required>
+
+                <label for="transitoInt">Tránsito Int:</label>
+                <input type="number" id="transitoInt" name="transitoInt" required>
+
+                <label for="conexionNac">Conexión Nac:</label>
+                <input type="number" id="conexionNac" name="conexionNac" required>
+
+                <label for="conexionInt">Conexión Int:</label>
+                <input type="number" id="conexionInt" name="conexionInt" required>
+
+                <label for="exentosNac">Exentos Nac:</label>
+                <input type="number" id="exentosNac" name="exentosNac" required>
+
+                <label for="exentosInt">Exentos Int:</label>
+                <input type="number" id="exentosInt" name="exentosInt" required>
+
+                <label for="totalNac">Total Nac:</label>
+                <input type="number" id="totalNac" name="totalNac" readonly>
+
+                <label for="totalInt">Total Int:</label>
+                <input type="number" id="totalInt" name="totalInt" readonly>
+
+                <label for="totalPax">Total Pax:</label>
+                <input type="number" id="totalPax" name="totalPax" readonly>
+
+                <label for="pzasEquipaje">Pzas. Equipaje:</label>
+                <input type="number" id="pzasEquipaje" name="pzasEquipaje" required>
+
+                <label for="kgsEquipaje">Kgs. Equipaje:</label>
+                <input type="number" id="kgsEquipaje" name="kgsEquipaje" required>
+
+                <label for="kgsCarga">Kgs. Carga:</label>
+                <input type="number" id="kgsCarga" name="kgsCarga" required>
+
+                <label for="correo">Correo:</label>
+                <input type="text" id="correo" name="correo" required>
+
+                <label for="mostrador">Mostrador:</label>
+                <input type="text" id="mostrador" name="mostrador" required>
+
+                <label for="banda">Banda:</label>
+                <input type="text" id="banda" name="banda" required>
+
+                <label for="ptaAbordaje">Pta Abordaje:</label>
+                <input type="text" id="ptaAbordaje" name="ptaAbordaje" required>
+
+                <label for="observaciones">Observaciones:</label>
+                <textarea id="observaciones" name="observaciones"></textarea>
+            </div>
+            <div class="form-actions">
+                <button type="submit">Registrar</button>
+                <button type="button" onclick="openModal('avionModal')">Dar de alta avión</button>
+                <button type="button" onclick="openModal('aeropuertoModal')">Dar de alta aeropuerto</button>
+            </div>
+        </form>
+    </main>
+    <div id="avionModal" class="modal">
+        <div class="modal-content">
+            <span class="close" data-modal="avionModal">&times;</span>
+            <h3>Registrar Avión</h3>
+            <form id="avionForm" action="php/insertar_aeronave.php" method="POST">
+                <label for="tipo_avion">Tipo de Avión:</label>
+                <input type="text" id="tipo_avion" name="tipo_avion" required>
+
+                <label for="aerolinea">Aerolínea:</label>
+                <input type="text" id="aerolinea" name="aerolinea" required>
+
+                <label for="max_pax">Max Pax:</label>
+                <input type="number" id="max_pax" name="max_pax" required>
+
+                <label for="factor_ocup">Factor Ocup.:</label>
+                <input type="text" id="factor_ocup" name="factor_ocup" required>
+
+                <label for="calificador">Calificador:</label>
+                <input type="text" id="calificador" name="calificador" required>
+
+                <button type="submit">Registrar Avión</button>
+            </form>
+        </div>
+    </div>
+    <div id="aeropuertoModal" class="modal">
+        <div class="modal-content">
+            <span class="close" data-modal="aeropuertoModal">&times;</span>
+            <h3>Registrar Aeropuerto</h3>
+            <form id="aeropuertoForm" action="php/insertar_aeropuerto.php" method="POST">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+
+                <label for="codigo">Código:</label>
+                <input type="text" id="codigo" name="codigo" required>
+
+                <label for="ubicacion">Ubicación:</label>
+                <input type="text" id="ubicacion" name="ubicacion" required>
+
+                <button type="submit">Registrar Aeropuerto</button>
+            </form>
+        </div>
+    </div>
+    <footer>
+        <p>© 2024 Aeropuerto Internacional de Toluca</p>
+    </footer>
+    <script src="js/scripts.js"></script>
+</body>
+</html>
